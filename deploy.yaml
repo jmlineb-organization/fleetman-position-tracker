@@ -18,10 +18,7 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
-        # For microk8s and CI/CD
-        imagePullPolicy: Always
-        # For minikube
-        #imagePullPolicy: Never
+        imagePullPolicy: Never
         readinessProbe:
           httpGet:
             path: /healthz
