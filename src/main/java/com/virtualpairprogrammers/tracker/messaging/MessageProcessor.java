@@ -33,9 +33,9 @@ public class MessageProcessor {
 				                          .withLat(new BigDecimal(incomingMessage.get("lat")))
 				                          .withLng(new BigDecimal(incomingMessage.get("long")))
 				                          .withTimestamp(convertedDatestamp)
+			                                  .withSpeed(new BigDecimal("47.5")) // added and hardcoded for Jenkins CI/CD demo in course lab
 				                          .build();
 				                          
 		data.updatePosition(newReport);
 	}
-
 }
